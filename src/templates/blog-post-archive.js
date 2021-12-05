@@ -2,9 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import parse from "html-react-parser"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import IntroInfo from "../components/introInfo"
+import SidebarInfo from "../components/sidebarInfo"
 
 const BlogIndex = ({
   data,
@@ -16,11 +17,7 @@ const BlogIndex = ({
     return (
       <Layout isHomePage>
         <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add posts to your WordPress site and they'll
-          appear here!
-        </p>
+        <p>I'm working on some stuff be patient</p>
       </Layout>
     )
   }
@@ -28,9 +25,8 @@ const BlogIndex = ({
   return (
     <Layout isHomePage>
       <Seo title="All posts" />
-
-      <Bio />
-
+      <IntroInfo />
+      <SidebarInfo></SidebarInfo>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.title
@@ -56,7 +52,6 @@ const BlogIndex = ({
           )
         })}
       </ol>
-
       {previousPagePath && (
         <>
           <Link to={previousPagePath}>Previous page</Link>

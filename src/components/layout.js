@@ -20,19 +20,15 @@ const Layout = ({ isHomePage, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isHomePage}>
-      <header className="global-header">
-        {isHomePage ? (
-          <h1 className="main-heading">
-            <Link to="/">{parse(title)}</Link>
-          </h1>
-        ) : (
-          <Link className="header-link-home" to="/">
-            {title}
-          </Link>
-        )}
-      </header>
+      <header className="global-header"></header>
 
-      <main>{children}</main>
+      <main>
+        <div className="portfolio-wrapper">
+          <div className="pr-right"></div>
+          <div className="pr-left"></div>
+        </div>
+        {children}
+      </main>
 
       <footer>
         © {new Date().getFullYear()}, Built with

@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Menu from "./menu"
+import DarkSwitch from "../components/darkSwitch"
 
 const SidebarInfo = () => {
   const { author } = useStaticQuery(graphql`
@@ -16,6 +17,7 @@ const SidebarInfo = () => {
   return (
     <div className="resumo_fn_right">
       <Menu />
+      <DarkSwitch />
       <div className="right_in">
         <div className="right_top">
           <div className="border1"></div>

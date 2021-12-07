@@ -7,9 +7,6 @@ const IntroInfo = () => {
       author: wpUser {
         firstName
         description
-        avatar {
-          url
-        }
       }
     }
   `)

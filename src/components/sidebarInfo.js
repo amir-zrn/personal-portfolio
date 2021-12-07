@@ -1,8 +1,18 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Menu from "./menu"
 
 const SidebarInfo = () => {
+  const { author } = useStaticQuery(graphql`
+    query SidebarInfoQuery {
+      author: wpUser {
+        name
+        firstName
+        description
+      }
+    }
+  `)
   return (
     <div className="resumo_fn_right">
       <Menu />
@@ -12,12 +22,20 @@ const SidebarInfo = () => {
           <div className="border2"></div>
 
           <div className="img_holder">
-            <div className="abs_img"></div>
+            <div className="abs_img">
+              <StaticImage
+                src="../../content/assets/right.jpg"
+                alt="portfolio"
+                placeholder="blurred"
+                width={480}
+                height={480}
+              />
+            </div>
           </div>
           <div className="title_holder">
             <h5>Hi There! I am</h5>
             <h3>
-              <span className="animated_title">Bruce Wilson</span>
+              <span className="animated_title">{author.name}</span>
               <span className="typed-cursor"></span>
             </h3>
           </div>

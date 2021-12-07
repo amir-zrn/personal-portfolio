@@ -11,6 +11,7 @@ const chunk = require(`lodash/chunk`)
  *
  * See https://www.gatsbyjs.com/docs/node-apis/#createPages for more info.
  */
+
 exports.createPages = async gatsbyUtilities => {
   // Query our posts from the GraphQL server
   const posts = await getPosts(gatsbyUtilities)

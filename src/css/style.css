@@ -96,6 +96,24 @@ a:focus {
 .resumo_fn_page .container {
   padding: 0 12%;
 }
+.dark .resumo_fn_right #darkMode {
+  background-image: url("../../content/assets/moon.svg");
+}
+
+.resumo_fn_right #darkMode {
+  background-image: url("../../content/assets/sun.svg");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 80px;
+  border: 1px solid #eee;
+  border-radius: 100%;
+  width: 80px;
+  background-position-x: center;
+  background-position-y: center;
+  cursor: pointer;
+}
+
 .resumo_fn_page,
 .resumo_fn_wrapper {
   width: 100%;

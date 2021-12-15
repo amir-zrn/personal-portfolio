@@ -5,7 +5,6 @@ import parse from "html-react-parser"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import ComponentName from "../components/info"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {

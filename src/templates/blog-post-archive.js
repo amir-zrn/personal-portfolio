@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import IntroInfo from "../components/introInfo"
 import SidebarInfo from "../components/sidebarInfo"
+import About from "../components/about"
 
 const BlogIndex = ({
   data,
@@ -26,6 +27,7 @@ const BlogIndex = ({
     <Layout isHomePage>
       <Seo title="All posts" />
       <IntroInfo />
+      <About />
       <SidebarInfo></SidebarInfo>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {

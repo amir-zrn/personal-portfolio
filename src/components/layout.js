@@ -23,20 +23,10 @@ const Layout = ({ isHomePage, children }) => {
       <header className="global-header"></header>
 
       <main>
-        <div className="portfolio-wrapper">
-          <div className="pr-right"></div>
-          <div className="pr-left"></div>
-        </div>
-        {children}
+        <div className="portfolio-wrapper">{children}</div>
       </main>
 
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-        {` `}
-        And <a href="https://wordpress.org/">WordPress</a>
-      </footer>
+      <footer></footer>
     </div>
   )
 }

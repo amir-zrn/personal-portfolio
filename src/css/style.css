@@ -90,8 +90,10 @@ a:focus {
   display: table;
   content: "";
 }
-.resumo_fn_page .home {
-  padding: 200px 0;
+.portfolio-wrapper .resumo_fn_page .section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .resumo_fn_page .container {
   padding: 0 12%;
